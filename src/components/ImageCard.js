@@ -1,3 +1,4 @@
+import "./ImageCard.css";
 import React, { Component } from "react";
 
 class ImageCard extends Component {
@@ -12,6 +13,7 @@ class ImageCard extends Component {
       console.log(this.imageRef.current.clientWidth)
     );
   }
+
   render() {
     return (
       <img
