@@ -16,11 +16,13 @@ class ImageCard extends Component {
 
   render() {
     return (
-      <img
-        ref={this.imageRef}
-        src={this.props.photo.urls.raw}
-        alt={this.props.photo.description}
-      />
+      <div className="image-card">
+        <img
+          ref={this.imageRef}
+          src={this.props.photo.urls.raw}
+          alt={this.props.photo.description}
+        />
+      </div>
     );
   }
 }
