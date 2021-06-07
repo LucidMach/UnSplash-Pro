@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+> DISCLAIMER: UnSplash Pro is in no way **_legally_** related to UnSplash
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What Why ??
 
-## Available Scripts
+Before we begin, I'd like to emphasis that the `Pro` in `UnSplash Pro` stands for `Programmer` and not ...pro(whatever that stands for😝).
 
-In the project directory, you can run:
+You see programmers have certain characteristics attributes:
 
-### `yarn start`
+1. They are super lazy
+2. They love `ctrl+c`&`ctrl+v`
+3. They hate choosing colors and pictures
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+They hate needing to go out just to snap, edit and process pictures so they can use it in some website
+(like whoTF even does that anyways😂)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The point is they hate even doing these series of ultra simple steps:
 
-### `yarn test`
+1. Choose pic from UnSplash
+2. Downloading pic from UnSplash
+3. Move downloaded pic to the project repo
+4. Type `<img src="./pathToPic"/>` (and not to mention the alt)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It'd be like **_heaven_** if they had a **tool** of sorts that they could just **copy** the **whole `<img/>`tag** from.
 
-### `yarn build`
+and that's the problem UnSplash Pro solves.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How ?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![ScreenShot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ven5pi02le49m7dw7rw1.png)
+Contrary to your belief, this is actually a really simple project
+Check It Out @ [UnSplash Pro](https://unsplashpro.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### What I used to make it
 
-### `yarn eject`
+1. **React**: So I could reuse a few of my previously built stuff
+2. **FlexBox**: Come on that's my greatest flex💪, I can't do any CSS without it
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Code Style (for Contributors)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Now I've used **class components** for the whole project. I know I'm prolly the only person alive who still uses class components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I have my reasons so here me out on this:
+Hooks makes the whole thing easier, but you only **understand components**, when you know **what's going on under the hood** and hence the project was built with class components.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### So how does the copy as a html tag work
 
-## Learn More
+It's really just a **template string** copied to the **clipboard**.
+![CopyHTML](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/921yg77qz023j3eoqw7l.png)
+with the imageURL and description are from the **unSplash API**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### But, What if I want to download/copy just the URL
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Don't worry unSplash Pro has got you covered.
 
-### Code Splitting
+1. The Download
+   This is kinda complex but still pretty easy.
+   It uses **filesaver.js** that converts the **image** to a **blob** and then sent into your **downloads folder**.
+   ![download](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nr9x2bhmxuj0zemprrfe.png)
+   The first argument to `filesaver.saveAs()` is the **path/URL** of the image, while the second argument specifies the **name** of the **to-be-downloaded file**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Copy URL
+   This one is almost exactly the same way we copy HTML code snippets
+   ![CopyURL](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/biu7fapu1ihxpxgw1q0f.png)
 
-### Analyzing the Bundle Size
+## Conclusions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+I think now's the best time to **apologize**...
+I'm **super sorry** for including **images of the code**, as a programmer I know you'd be wanting to be able to `ctrl+c`&`ctrl+v`, but I'm a programmer too and **I'm too lazy** to
 
-### Making a Progressive Web App
+1. Go Up
+2. Delete the Images
+3. Make ` `
+4. Pasted the Code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you had fun reading this... here's my [@twitter](https://twitter.com/LucidMach) and [@insta](https://www.instagram.com/lucidmach/)
+Smash that 👍 button (even tho it doesn't exist on dev.to)
