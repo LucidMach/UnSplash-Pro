@@ -20,10 +20,12 @@ class ImageCard extends Component {
     navigator.clipboard.writeText(
       `<img src="${this.props.photo.urls.regular}" alt="${this.props.photo.description}" />`
     );
+    this.props.alert("Code Snippet Copied!");
   };
 
   copyURL = () => {
     navigator.clipboard.writeText(this.props.photo.urls.regular);
+    this.props.alert("URL Copied!");
   };
 
   componentDidMount() {
