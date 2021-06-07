@@ -1,0 +1,12 @@
+.alert {
+  font-size: 1.2rem;
+  width: 50vw;
+  text-align: center;
+  position: fixed;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  color: #f1f1f1;
+  padding: 10px 15px;
+  top: 90vh;
+  left: 25vw;
+}
