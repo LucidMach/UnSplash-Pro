@@ -8,3 +8,9 @@
 ::-webkit-scrollbar {
   width: 1px;
 }
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

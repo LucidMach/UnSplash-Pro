@@ -4,6 +4,7 @@ import unsplash from "../api/unsplash";
 import ImageList from "./ImageList";
 import Bar from "./Bar";
 import Links from "./Links";
+import Info from "./Info";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -70,9 +71,9 @@ const App = () => {
           "https://dev.to/lucidmach",
         ]}
       />
+      {photos.length === 0 ? <Info /> : ""}
       <SearchBar submit={search}></SearchBar>
       <ImageList photos={photos} alert={setAlert}></ImageList>
-
       <Bar msg={alert}></Bar>
     </div>
   );

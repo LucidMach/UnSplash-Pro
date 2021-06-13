@@ -1,3 +1,4 @@
+import "./SearchBar.css";
 import { useState } from "react";
 
 const SearchBar = ({ submit }) => {
@@ -16,7 +17,7 @@ const SearchBar = ({ submit }) => {
     <div className="ui segment">
       <form className="ui form" onSubmit={handleSubmit}>
         <div className="field">
-          <label>Image Search</label>
+          <label>Search</label>
           <input type="text" value={term} onChange={handleInputChange} />
         </div>
       </form>

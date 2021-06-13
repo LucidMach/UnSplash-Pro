@@ -1,0 +1,25 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: justify;
+  font-size: 0.9rem;
+  align-items: flex-start;
+}
+.info p {
+  align-self: start;
+}
+.content {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+.card img {
+  height: 20vh;
+}
