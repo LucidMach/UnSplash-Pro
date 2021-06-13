@@ -4,21 +4,20 @@ import unsplash from "../api/unsplash";
 import ImageList from "./ImageList";
 import Bar from "./Bar";
 import Links from "./Links";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
   const [photos, setPhotos] = useState([]);
-  const [alert, setAlert] = useState("");
+  const [alert, setAlert] = useState("UnSplash Pro");
 
   const search = async (term) => {
     const res = await unsplash.get(`search/photos?query=${term}`);
     setPhotos(res.data.results);
   };
 
-  const sendAlert = (msg) => {
-    setAlert(msg);
-    setTimeout(1000, () => setAlert(""));
-  };
+  useEffect(() => {
+    setTimeout(() => setAlert("UnSplash Pro"), 1000);
+  }, [alert]);
 
   return (
     <div className="ui container">
@@ -72,12 +71,9 @@ const App = () => {
         ]}
       />
       <SearchBar submit={search}></SearchBar>
-      <ImageList photos={photos} alert={sendAlert}></ImageList>
-      {alert === "" ? (
-        <Bar msg={"UnSplash Pro"}></Bar>
-      ) : (
-        <Bar msg={alert}></Bar>
-      )}
+      <ImageList photos={photos} alert={setAlert}></ImageList>
+
+      <Bar msg={alert}></Bar>
     </div>
   );
 };
