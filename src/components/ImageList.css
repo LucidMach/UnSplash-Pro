@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
+  padding: 5vw;
 }
 .image-list {
   display: flex;
