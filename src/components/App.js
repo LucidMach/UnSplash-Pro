@@ -3,7 +3,7 @@ import "./App.css";
 import SearchBar from "./SearchBar";
 import unsplash from "../api/unsplash";
 import ImageList from "./ImageList";
-import Alert from "./Alert";
+import Alert from "./Bar";
 import Links from "./Links";
 
 class App extends Component {
