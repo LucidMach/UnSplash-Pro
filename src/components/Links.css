@@ -1,0 +1,11 @@
+.float {
+  position: fixed;
+  z-index: 9;
+  left: 3vh;
+  top: 3vh;
+  display: flex;
+  flex-direction: column;
+}
+.float svg {
+  margin: 5px;
+}
