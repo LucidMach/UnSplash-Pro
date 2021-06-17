@@ -17,8 +17,13 @@ const SearchBar = ({ submit }) => {
     <div className="ui segment">
       <form className="ui form" onSubmit={handleSubmit}>
         <div className="field">
-          <label>Search</label>
+          <label>Search Images</label>
           <input type="text" value={term} onChange={handleInputChange} />
+          <p>
+            Powered by <strong>UnSplash</strong> | Built for{" "}
+            <strong>Pro</strong>
+            grammers
+          </p>
         </div>
       </form>
     </div>
